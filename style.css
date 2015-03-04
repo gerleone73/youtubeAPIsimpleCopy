@@ -8,7 +8,7 @@ body{
 #header{
 		width:100%;
 		background-color: #f1f1f1;
-		margin-bottom: 1em;
+		margin-bottom: 4px;
 	}
 
 	.page{
@@ -28,19 +28,33 @@ body{
 	.info{
 		color:#167ac6;
 		float:left;
+		
 	}
-
-	.info p{
-		min-height: 154px;
-		padding-top:.5em;
-		padding-left:.5em;
+	.text{
 		width: 600px;
-		font-family: arial, sans-serif;
-		font-weight: bold;
-		margin-top:0;
-		margin-bottom: 0;
 		background-color:#f1f1f1;
 		border-bottom: 4px solid white;
+		height: 153px;
+		padding: 1em;
+	}
+
+	.text h3{
+		font-size: 1em;
+		font-weight: bold;
+		
+		
+	}
+
+	.text p{
+	
+		
+		padding-top: 1em;
+		font-family: arial, sans-serif;
+		color: #666;
+		font-size: .75em;
+		margin-top:0;
+		margin-bottom: 0;
+		
 	}
 	#search-form{
 		padding: 2em 0;

@@ -39,8 +39,7 @@ function showResults(results){ //shows the results to the user
 //debugger;
     
     videos+='<li><iframe src="https://www.youtube.com/embed/' + items.id.videoId + '"></iframe></li>';
-    html += '<p>' + items.snippet.title + '</p>'; // create a new paragraph with the title
-
+    html += "<div class ='text'><h3>" + items.snippet.title + "</h3><p>" + items.snippet.description + "</p></div>"; // create a new paragraph with the title
 
     //html += '<img src=' + items.snippet.thumbnails.default.url + '>'; 
    // html += '</a>';
