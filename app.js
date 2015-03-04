@@ -1,10 +1,14 @@
 $(document).ready(function(){
 
 $(function(){
+
+
+
   $('#search-form').submit(function(event){ // when the user clicks submit....
     event.preventDefault(); // prevent the form from submitting
     var searchTerm = $('#query').val(); // take whatever is in the search field and put it in searchTerm
     getRequest(searchTerm); //call the function "getRequest" and pass it the search term
+    
   });
 });
 
@@ -27,11 +31,16 @@ function getRequest(searchTerm){
 }
 
 function showResults(results){ //shows the results to the user
+  $('#query').val('');
+  $('#search-results').empty();
   var html = ""; // variable to hold the html
   $.each(results, function(index,items){ //for each of the results
 //debugger;
-    //html += '<p>' + items.snippet.thumbnails.default.url + '</p>'; // create a new paragraph with the title
-    html += '<li><iframe src="https://www.youtube.com/embed/"' + items.id.videoId + '</iframe></li>';
+    html += '<p>' + items.snippet.title + '</p>'; // create a new paragraph with the title
+    html+='<li><iframe src="https://www.youtube.com/embed/' + items.id.videoId + '"></iframe></li>';
+
+
+
     //html += '<img src=' + items.snippet.thumbnails.default.url + '>'; 
    // html += '</a>';
 
@@ -43,3 +52,4 @@ function showResults(results){ //shows the results to the user
 
 
 });
+
