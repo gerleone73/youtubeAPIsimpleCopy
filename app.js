@@ -33,12 +33,13 @@ function getRequest(searchTerm){
 function showResults(results){ //shows the results to the user
   $('#query').val('');
   $('#search-results').empty();
-  var html = ""; // variable to hold the html
+  var videos = ""; // variable to hold the videos
+  var html="";
   $.each(results, function(index,items){ //for each of the results
 //debugger;
+    
+    videos+='<li><iframe src="https://www.youtube.com/embed/' + items.id.videoId + '"></iframe></li>';
     html += '<p>' + items.snippet.title + '</p>'; // create a new paragraph with the title
-    html+='<li><iframe src="https://www.youtube.com/embed/' + items.id.videoId + '"></iframe></li>';
-
 
 
     //html += '<img src=' + items.snippet.thumbnails.default.url + '>'; 
@@ -47,7 +48,8 @@ function showResults(results){ //shows the results to the user
     //console.log(items.snippet.thumbnails.default.url);
     console.log(items.id.videoId);
   });
-  $('#search-results').append(html); // display each of those paragraphs on the page
+  $('#search-results').append(videos); // display each of those paragraphs on the page
+  $('.info').append(html);
 }
 
 
