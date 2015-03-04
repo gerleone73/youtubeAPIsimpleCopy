@@ -1,102 +1,63 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, button, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, input,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/*--- Additional Resets ---*/
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
- *:focus {
-	outline: 0;
-}
-
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-html, html a{
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-}
 
 /* STYLES */
 
+body{
+	font-family: arial, sans-serif;
+}
+
 #header{
 		width:100%;
-		background-color: red;
+		background-color: #f1f1f1;
+		margin-bottom: 1em;
+	}
+
+	.page{
+		width:900px;
+		margin: 0 auto;
 	}
 	
 	#search-results{
 		float:left;
 		margin-top: 0;
+		padding: 0em;
+	}
+
+	#search-results li{
+
 	}
 	.info{
-		color:blue;
+		color:#167ac6;
 		float:left;
 	}
 
 	.info p{
-		height: 158px;
-		padding:0;
+		min-height: 154px;
+		padding-top:.5em;
+		padding-left:.5em;
+		width: 600px;
+		font-family: arial, sans-serif;
+		font-weight: bold;
 		margin-top:0;
 		margin-bottom: 0;
-		-webkit-margin-after: 0em
+		background-color:#f1f1f1;
+		border-bottom: 4px solid white;
 	}
-	input[type=text]{
-		border: 1px solid black;
-		background-color: red;
-		width: 100px;
-		height: 5em;
+	#search-form{
+		padding: 2em 0;
+		margin: 0 auto;
+		text-align: center;
 	}
+	 #query{
+		border: 1px solid rgba(168,168,168, .3);
+		width: 900px;
+		padding-right:100px;	
+		text-align: left;
+		height: 2.5em;
+		font-family: arial, sans-serif;
+	}
+	input[type="submit"] {
+    margin-left: -100px;
+    height: 2.5em;
+    padding: 0 .5em;
+    width: 100px;
+}
